@@ -924,7 +924,7 @@ class Macro:
 
     def __get_event_delta_time(self):
         timenow=time()
-        self.event_delta_time = timenow - self.time
+        self.event_delta_time = timenow - self.time if self.time is not None else 0
         self.time=timenow
 
     def __on_move(self, x, y):
